@@ -1,0 +1,46 @@
+/* Style général */
+.root {
+    -fx-background-color: #d9d9f1;
+    -fx-padding: 20;
+}
+
+/* Titre principal */
+.label {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-text-fill: #0d37a3;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+}
+
+/* Champs de texte */
+.text-field {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-padding: 8 12;
+    -fx-background-color: white;
+    -fx-border-color: #e1e1dc;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 4, 0.0, 0, 2);
+}
+
+/* Effet au focus */
+.text-field:focused {
+    -fx-border-color: #007bff;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 123, 255, 0.2), 6, 0.0, 0, 2);
+}
+
+/* Bouton */
+.button {
+    -fx-background-color: #0d37a3;
+    -fx-text-fill: #ffd500;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-padding: 10 20;
+}
+
+/* Hover */
+.button:hover {
+    -fx-background-color: #0056b3;
+}
