@@ -63,6 +63,60 @@ public class InterfaceAdminController {
         }
 
     }
+    @FXML
+    void listbagage(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/AfficherResBaggage.fxml"));
+            Parent root = loader.load();
+
+            vboxTF.getScene().setRoot(root);
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+
+        }
+    }
+    @FXML
+    void listreservclient(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/AfficherResClient.fxml"));
+            Parent root = loader.load();
+
+            vboxTF.getScene().setRoot(root);
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+
+        }
+
+
+    }
+
+    @FXML
+    void suppbagage(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/SupprimmerResBaggage.fxml"));
+            Parent root = loader.load();
+
+            vboxTF.getScene().setRoot(root);
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+
+        }
+
+    }
+
+    @FXML
+    void suppreservclient(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/SupprimmerResClient.fxml"));
+            Parent root = loader.load();
+
+            vboxTF.getScene().setRoot(root);
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+
+        }
+
+    }
 
     }
 

@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.InterfaceClientController">
    <top>
       <Label prefHeight="105.0" prefWidth="406.0" text="Bienvenue sur votre espace Client" BorderPane.alignment="CENTER">
@@ -26,4 +25,17 @@
          </children>
       </VBox>
    </left>
+   <right>
+      <VBox prefHeight="254.0" prefWidth="197.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#AjoutResClient" prefHeight="49.0" prefWidth="199.0" text="Ajout Reservation Client" />
+            <Label prefHeight="20.0" prefWidth="194.0" />
+            <Button mnemonicParsing="false" onAction="#ModifResClient" prefHeight="50.0" prefWidth="199.0" text="Modifier Reservation Client" />
+            <Label prefHeight="20.0" prefWidth="194.0" />
+            <Button mnemonicParsing="false" onAction="#AjoutReservBag" prefHeight="50.0" prefWidth="199.0" text="Ajout Reservation Bagage" />
+            <Label prefHeight="20.0" prefWidth="194.0" />
+            <Button mnemonicParsing="false" onAction="#ModifiReserBag" prefHeight="50.0" prefWidth="199.0" text="Modifier Reservation Bagage" />
+         </children>
+      </VBox>
+   </right>
 </BorderPane>
