@@ -23,6 +23,7 @@ public class LoginController {
     @FXML
     void connexion(ActionEvent event) {
 
+
         if((EmailTF.getText().isEmpty()) || !(EmailTF.getText().contains("@")) || !(EmailTF.getText().contains(".")) || (EmailTF.getText().indexOf("@") > EmailTF.getText().lastIndexOf(".")))
         {
             Alert a = new Alert (Alert.AlertType.ERROR);
@@ -45,6 +46,7 @@ public class LoginController {
         UtilisateurService us=new UtilisateurService();
         try {
             Utilisateur u = us.rechercherpaMailetPassword(email,password);
+
             if( u != null) {
                 if(u.getRole().equals("Admin")){
 //naviguez vers interface admin
@@ -62,11 +64,23 @@ public class LoginController {
             }
             else
             {
-                //Veuillez créer un compte
-                Alert a = new Alert (Alert.AlertType.ERROR);
-                a.setTitle("Erreur");
-                a.setContentText("Veuillez vérifier votre email ou mot de passe");
-                a.showAndWait();
+                if(compteur<3){
+                    //Veuillez créer un compte
+                    Alert a = new Alert (Alert.AlertType.ERROR);
+                    a.setTitle("Erreur");
+                    a.setContentText("Veuillez vérifier votre email ou mot de passe");
+                    a.showAndWait();
+                    compteur++;
+                }
+
+                else
+                {
+                    Alert al = new Alert (Alert.AlertType.ERROR);
+                    al.setTitle("Erreur");
+                    al.setContentText("Veuillez créer un compte");
+                    al.showAndWait();
+                    compteur=0;
+                }
             }
         } catch (SQLException |IOException e) {
             System.out.println(e.getMessage());

@@ -12,7 +12,7 @@
    <top>
       <Pane prefHeight="85.0" prefWidth="560.0" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="121.0" layoutY="23.0" prefHeight="42.0" prefWidth="393.0" text="Bienvenue sur votre espace Admin">
+            <Label layoutX="91.0" layoutY="22.0" prefHeight="42.0" prefWidth="393.0" text="Bienvenue sur votre espace Admin">
                <font>
                   <Font size="24.0" />
                </font>
@@ -35,4 +35,17 @@
          </children>
       </VBox>
    </left>
+   <right>
+      <VBox prefHeight="283.0" prefWidth="189.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#listreservclient" prefHeight="50.0" prefWidth="188.0" text="Reservations Clients" />
+            <Label prefHeight="18.0" prefWidth="190.0" />
+            <Button mnemonicParsing="false" onAction="#listbagage" prefHeight="50.0" prefWidth="188.0" text="Reservations Bagages" />
+            <Label prefHeight="19.0" prefWidth="190.0" />
+            <Button mnemonicParsing="false" onAction="#suppreservclient" prefHeight="50.0" prefWidth="188.0" text="Supprimer Reservations" />
+            <Label prefHeight="22.0" prefWidth="190.0" />
+            <Button mnemonicParsing="false" onAction="#suppbagage" prefHeight="50.0" prefWidth="188.0" text="Supprimer Bagages" />
+         </children>
+      </VBox>
+   </right>
 </BorderPane>
