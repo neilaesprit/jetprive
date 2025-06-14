@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AfficherResController">
+    <children>
+        <Label alignment="CENTER" layoutX="119.0" layoutY="35.0" prefHeight="54.0" prefWidth="353.0" stylesheets="@style.css" text="Liste des Reservations Clients">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <ListView fx:id="ListReserv" layoutX="36.0" layoutY="114.0" prefHeight="256.0" prefWidth="523.0" />
+        <TableView fx:id="tabReserv" layoutX="34.0" layoutY="114.0" prefHeight="256.0" prefWidth="523.0">
+            <columns>
+                <TableColumn fx:id="c1" prefWidth="42.39996337890625" text="Id" />
+                <TableColumn fx:id="c2" prefWidth="160.0" text="Date Reservation" />
+                <TableColumn fx:id="c3" prefWidth="141.5999755859375" text="destination" />
+                <TableColumn fx:id="c4" minWidth="0.0" text="Nombre" />
+            <TableColumn fx:id="c11" prefWidth="100.00006103515625" text="id User" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
