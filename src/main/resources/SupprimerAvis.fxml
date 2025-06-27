@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SupprimerAvisController">
+   <children>
+      <TextField fx:id="idAvisTF" layoutX="203.0" layoutY="98.0" promptText="idAvis" />
+      <TextField fx:id="idUserTF" layoutX="203.0" layoutY="187.0" promptText="idUser" />
+      <Button layoutX="412.0" layoutY="302.0" mnemonicParsing="false" onAction="#supprimeravis" text="Supprimer Avis">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="30.0" layoutY="97.0" prefHeight="34.0" prefWidth="129.0" text="Identifiant Avis">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="186.0" prefHeight="34.0" prefWidth="130.0" text="Identifiant User">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="20" xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.AirportController"
+      alignment="TOP_CENTER" style="-fx-background-color: #f0f8ff;">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <!-- Titre -->
+    <Label text="✈ Gestion des Aéroports"
+           style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+
+    <!-- Barre de recherche -->
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="🔍 Rechercher :" style="-fx-font-size: 14px;"/>
+        <TextField fx:id="searchField" onKeyReleased="#rechercherAirport"
+                   promptText="Nom ou Localisation"
+                   style="-fx-pref-width: 250; -fx-border-color: #ccc; -fx-border-radius: 4;"/>
+    </HBox>
+
+    <!-- Bouton Exporter PDF -->
+    <Button text="Exporter PDF" onAction="#exporterPDF"
+            style="-fx-background-color: #8e44ad; -fx-text-fill: white; -fx-font-weight: bold;"/>
+
+    <!-- TableView des aéroports -->
+    <TableView fx:id="airportTable" prefHeight="250" prefWidth="600"
+               style="-fx-background-color: white; -fx-border-color: #dcdcdc; -fx-border-radius: 5; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 2);">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" prefWidth="50"/>
+            <TableColumn fx:id="nomColumn" text="Nom" prefWidth="150"/>
+            <TableColumn fx:id="localisationColumn" text="Localisation" prefWidth="150"/>
+            <TableColumn fx:id="capacityColumn" text="Capacité" prefWidth="100"/>
+            <TableColumn fx:id="airlineIdColumn" text="Airline ID" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+    <!-- Formulaire d'entrée -->
+    <GridPane hgap="10" vgap="12"
+              style="-fx-background-color: #ffffff; -fx-padding: 15; -fx-border-color: #e0e0e0; -fx-border-radius: 5;">
+        <Label text="Nom :" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="nomField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Localisation :" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="localisationField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Capacité :" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="capacityField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Airline ID :" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="airlineIdComboBox" prefWidth="150"
+                  GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <!-- Boutons d'action -->
+    <HBox spacing="15" alignment="CENTER">
+        <Button text="Ajouter" onAction="#ajouterAirport"
+                style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold;"/>
+        <Button text="Modifier" onAction="#modifierAirport"
+                style="-fx-background-color: #2980b9; -fx-text-fill: white; -fx-font-weight: bold;"/>
+        <Button text="Supprimer" onAction="#supprimerAirport"
+                style="-fx-background-color: #c0392b; -fx-text-fill: white; -fx-font-weight: bold;"/>
+        <Button text="Réinitialiser" onAction="#rafraichir"
+                style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-font-weight: bold;"/>
+        <Button text="Retour à l'interface Admin" onAction="#goBackToAdmin" />
+    </HBox>
+
+
+</VBox>
